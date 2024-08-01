@@ -39,4 +39,23 @@ console.log(audioVolume + " y su son es " + anotherSong + " y el son nuevo es " 
 console.log(`El autor es ${author}`);
 
 
+//------------------------- Desesctruturacion de arrreglos
+const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
+
+console.log('Personaje 3:', dbz[2]);
+
+const trunk: string = dbz[3] || 'No hay personaje';
+console.log('Personaje 4 (no encontrado pero tiene valor por defecto):', trunk);
+
+// para desestructurar un arreglo, lo hacemos usando los corchetes
+const [p1, p2, p3]: string[] = dbz;
+console.log('P1 es:', p1);
+
+// si necesitamos usar el valor q esta en otra psoicion, debemos usar o dejar su espacio usnaod las comas y si ese valor no existe, le podemos colcoar un defaul
+const [, , , p4DF = 'Not Found']: string[] = dbz;
+console.log('default:', p4DF);
+
+
+
+
 export { };
