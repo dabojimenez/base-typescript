@@ -26,9 +26,17 @@ const audioPlayer: AudioPlay = {
 // const { audioVolume, song } = audioPlayer;
 const song = 'New Song';
 // de esta forma cambiamos el nombre en la desustruracion
-const { audioVolume, song: anotherSong } = audioPlayer;
+const { audioVolume,
+    // details : { author }, // no muy recomendable, ya que es muy facil perderse con esta sintaxis de desestructuracion anidada
+    song: anotherSong
+} = audioPlayer;
+
+// desestructuramos el autor
+const { details } = audioPlayer
+const { author } = details;
 
 console.log(audioVolume + " y su son es " + anotherSong + " y el son nuevo es " + song);
+console.log(`El autor es ${author}`);
 
 
 export { };
